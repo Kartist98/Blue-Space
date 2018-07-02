@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BLue Space | Exploring the Solar System</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+	<link href="css/background.css" rel="stylesheet" type="text/css">
+	<link href="css/map.css" rel="stylesheet" type="text/css">
+	<link href="css/blue-space.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  	<!-- body code goes here -->
+	
+	<div class="container-fluid no-gutters">
+		
+		<!-- BACKGROUND -->
+		
+		<div id="bg">
+			<div class="bg-fixed-item" id="galaxy"></div>
+			<div class="bg-fixed-item" id="dark-space"></div>
+			<div class="bg-fixed-item" id="violet-space"></div>
+			<div class="bg-fixed-item stars" id="stars1"></div>
+			<div class="bg-fixed-item stars" id="stars2"></div>
+			<div class="bg-fixed-item stars" id="stars3"></div>
+			<div class="bg-fixed-item stars" id="stars4"></div>
+			<div class="bg-item" id="sunbox">
+				<img class="suns" id="sunlight3" src="img/background/sunlight-3.svg">
+				<img class="suns" id="sunlight2" src="img/background/sunlight-2.svg">
+				<img class="suns" id="sunlight1" src="img/background/sunlight-1.svg">
+				<img class="suns" id="sun" src="img/background/sun.svg">
+                <div id="map-button">
+                    <img id="map-b-light" src="img/navigation/map-button-light.svg">
+                    <img id="map-b-hover" src="img/navigation/map-button-light.svg">
+                    <img id="map-b-text" src="img/navigation/map-button.svg">
+                </div>
+            </div>
+			<img class="bg-item" id="rocks" src="img/background/rocks.svg">
+			<img class="bg-item" id="comet" src="img/background/comet.svg">
+			<img class="bg-item" id="planet5" src="img/background/planet-5.svg">
+			<img class="bg-item" id="planet4" src="img/background/planet-4.svg">
+			<img class="bg-item" id="planet3" src="img/background/planet-3.svg">
+			<img class="bg-item" id="planet2" src="img/background/planet-2.svg">
+			<img class="bg-item" id="bs" src="img/background/bluespace.svg">
+			<img class="bg-item" id="slogan" src="img/background/slogan.svg">
+			<img class="bg-item" id="planet1" src="img/background/planet-1.svg">
+			<img class="bg-item" id="planet0" src="img/background/planet-0.svg">
+			<img class="bg-item" id="blueship" src="img/background/blueship-standing.svg">
+		</div>
+		
+        <!-- BACKGROUND MUSIC -->
+            
+            <audio autoplay loop>
+                <source src="audio/background-music.ogg" type="audio/ogg">
+            </audio>
+            
+            <div id="volume" class="row">
+                <div class="volume-spectrum align-self-center" id="vs1"></div>
+                <div class="volume-spectrum align-self-center" id="vs2"></div>
+                <div class="volume-spectrum align-self-center" id="vs3"></div>
+				<div class="mute-spectrum align-self-center"></div>
+				<div class="mute-spectrum align-self-center"></div>
+				<div class="mute-spectrum align-self-center"></div>
+            </div>
+        
+		<!-- NAVIGATION -->
+		<div id="map"></div>
+	</div>
+	
+	<!-- CONTENT -->
+	
+	<div class="kontainer">
+		<div class="row">
+            
+        </div>
+        
+	</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+      <script>
+      
+            // VOLUME //
+				
+            $(document).ready(function(){
+				$(".mute-spectrum").hide();
+
+				$(".square0").hover(function(){
+					$(this).css({"opacity": "0.025"});
+					}, function(){
+						$(this).css({"opacity": "0"});
+				});
+            });
+      </script>
+      
+      
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script> 
+  <script src="js/bootstrap-4.0.0.js"></script>
+  </body>
+</html>
