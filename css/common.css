@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+/* FONT */
+
+@font-face{
+	font-family: Brandon;
+	src: url(../font/icielBrandonText-Bold.ttf);
+}
+
+/* MAIN RULES */
+
+body {
+	background-color: #000779ff;
+	margin: 0px;
+	padding: 0px;
+    font-family: roboto;
+	color: white;
+}
+.container-fluid{
+	padding: 0px;
+    z-index: 0;
+}
+.kontainer {
+    padding: 0px 40px;
+    max-width: 100%;
+}
+@media (min-width: 768px) {
+    .kontainer {
+        padding: 0px 80px;
+    } 
+}
+@media (min-width: 1200px) {
+    .kontainer {
+        max-width: 1200px;
+        margin: 0px auto;
+    } 
+}
+
+/* BACKGROUND MUSIC */
+
+@keyframes vs1{
+    0% {height: 4px;}
+    100% {height: 14px;}
+}
+@keyframes vs2{
+    0% {height: 4px;}
+    100% {height: 14px;}
+}
+@keyframes vs3{
+    0% {height: 4px;}
+    100% {height: 14px;}
+}
+
+#volume{
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    border-color: white;
+    border-width: 4px;
+    border-style: solid;
+    opacity: 0.5;
+    transition: all 0.5s;
+	padding: 9px 7px;
+	margin: 0;
+	z-index: 10;
+    animation-name: volume;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#volume:hover{
+	opacity: 1;
+	transform: rotateZ(-180deg);
+}
+@keyframes volume{
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+
+.volume-spectrum{
+    background-color: white;
+    height: 4px;
+    width: 4px;
+    margin: 0px 1px;
+    border-radius: 2px;
+	
+    animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    animation-direction: alternate;
+}
+#vs1{animation-name: vs1;}
+#vs2{animation-name: vs2; animation-delay: 0.4s;}
+#vs3{animation-name: vs3; animation-delay: 0.8s;}
+#mute{
+	width: 100%;
+	height: 100%;
+}
+.mute-spectrum{
+	background-color: black;
+    height: 4px;
+    width: 4px;
+    margin: 0px 1px;
+}
+
+/* MAP BUTTON */
+
+#map-button{
+	z-index: 100;
+}
+#map-button img{
+	position: fixed;
+	z-index: 100;
+}
+#map-bb-light, #map-bb-bg, #map-bb-hover{
+	height: 110px;
+	bottom: -11px;
+	left: 50%;
+	margin-left: -55px;
+}
+#map-bb-hover{
+	opacity: 0;
+	transition: all 0.2s;
+}
+#map-bb-text{
+	height: 48px;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -24px;
+	opacity: 0.8;
+	transition: all .2s;
+}
+#map-bb-text:hover #map-bb-hover, #map-bb-text{
+	opacity: 1;
+}
+
+
+.breakrow{
+	height: 0;
+	width: 100%;
+}
+#pbanner{
+	position: relative;
+	height: 100vh;
+	padding-bottom: 80px;
+}
+#pbanner-content{
+	height: 100%;
+	position: relative;
+}
+#pbanner img{
+	padding: 0px;
+	position: absolute;
+}
+#down-arrow{
+	cursor: pointer;
+	height: 40px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	opacity: 0.5;
+	transition: all .5s;
+}
+#down-arrow:hover{
+	opacity: 1;
+}
+#content p{
+	display: block;
+	background-color: rgba(0,0,0,0.20);
+	padding: 10px;
+	text-align: justify;
+}
+
+#footer{
+	padding-bottom: 129px;
+	z-index: 10;
+}
+
+@media (min-aspect-ratio:1/2){
+	
+	#planet-illustration{
+		height: 40%;
+		top: 20%;
+	}
+	#planet-name{
+		height: 10%;
+		bottom: 20%;
+	}
+	
+}
+
+@media (min-aspect-ratio:7/9){
+	
+	#planet-illustration{
+		height: 50%;
+		top: 15%;
+	}
+	#planet-name{
+		height: 10%;
+		bottom: 15%;
+	}
+	
+}
+
+@media (min-width: 576px) { 
+
+}
+
+@media (min-width: 768px) { 
+    #volume{
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media (min-width: 992px) { 
+
+}
+
+@media (min-width: 1200px) { 
+	
+}

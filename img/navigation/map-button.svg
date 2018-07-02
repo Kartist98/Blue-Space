@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="240"
+   height="240"
+   viewBox="0 0 63.5 63.5"
+   version="1.1"
+   id="svg1633"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="map-button.svg">
+  <defs
+     id="defs1627" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-357.14284"
+     inkscape:cy="457.14288"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata1630">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-105.07738,-206.28572)">
+    <circle
+       r="31.75"
+       cy="238.03572"
+       cx="136.82738"
+       id="circle12743"
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.45357132;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.40303802px;line-height:1.25;font-family:'iCiel Brandon Text';-inkscape-font-specification:'iCiel Brandon Text';letter-spacing:0px;word-spacing:0px;display:inline;opacity:0.8;fill:#020741;fill-opacity:1;stroke:none;stroke-width:0.3850759"
+       x="120.234"
+       y="243.42677"
+       id="text36058-4"><tspan
+         sodipodi:role="line"
+         id="tspan36056-4"
+         x="120.234"
+         y="243.42677"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'iCiel Brandon Text';-inkscape-font-specification:'iCiel Brandon Text';fill:#020741;fill-opacity:1;stroke-width:0.3850759">MAP</tspan></text>
+  </g>
+</svg>

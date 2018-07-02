@@ -1,0 +1,743 @@
+@charset "utf-8";
+
+/* 16:9 - 800:450 21:9 - 1050:450 1:1 - 450:450 1:2 - 225:450 */
+
+#bg {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	overflow: hidden;
+	z-index: 0;
+}
+.bg-fixed-item {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	transition: all .5s;
+}
+.bg-item{
+	position: fixed;
+	transition: all .2s;
+}
+#galaxy{
+	background-image: url("../img/background/galaxy.svg");
+    animation-name: galaxy;
+    animation-duration: 8s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#dark-space {
+	background-image: url("../img/background/dark-space.svg");
+    animation-name: dark-space;
+    animation-duration: 12s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+}
+#violet-space {
+	background-image: url("../img/background/violet-space.svg");
+    animation-name: violet-space;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4s;
+}
+@keyframes galaxy{
+    0% {opacity: 0.25;}
+    25% {opacity: 1;}
+    75% {opacity: 1;}
+    100% {opacity: 0.25;}
+}
+@keyframes dark-space{
+    0% {opacity: 0.5;}
+    25% {opacity: 1;}
+    75% {opacity: 1;}
+    100% {opacity: 0.5;}
+}
+@keyframes violet-space{
+    0% {opacity: 0.5;}
+    50% {opacity: 1;}
+    100% {opacity: 0.5;}
+}
+
+#sunbox{
+    animation-name: sb;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+#sunlight1{animation-name: sl1;}
+#sunlight2{animation-name: sl2;}
+#sunlight3{animation-name: sl3;}
+#sunlight1, #sunlight2, #sunlight3{
+    animation-fill-mode: both;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes sb{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes sl1{
+    0%{opacity: 0;}
+    33.33%{opacity: 1;}
+    100%{opacity: 1;}
+}
+@keyframes sl2{
+    0%{opacity: 0;}
+    33.33%{opacity: 0;}
+    66.33%{opacity: 1;}
+    100%{opacity: 1;}
+}
+@keyframes sl3{
+    0%{opacity: 0;}
+    66.33%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#stars1 {
+	background-image: url(../img/background/stars-1.svg);
+    animation-name: star1;
+}
+#stars2 {
+	background-image: url(../img/background/stars-2.svg);
+    animation-name: star2;
+}
+#stars3 {
+	background-image: url(../img/background/stars-3.svg);
+    animation-name: star3;
+}
+#stars4 {
+	background-image: url(../img/background/stars-4.svg);
+    animation-name: star4;
+}
+#stars1, #stars2, #stars3, #stars4{
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes star1{
+    0% {opacity: 0;}
+    40% {opacity: 1;}
+    80% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes star2{
+    0% {opacity: 0.125;}
+    5% {opacity: 0;}
+    25% {opacity: 0;}
+    65% {opacity: 1;}
+    100% {opacity: 0.125;}
+}
+@keyframes star3{
+    0% {opacity: 0.75;}
+    30% {opacity: 0;}
+    50% {opacity: 0;}
+    90% {opacity: 1;}
+    100% {opacity: 0.75;}
+}
+@keyframes star4{
+    0% {opacity: 0.625;}
+    15% {opacity: 1;}
+    55% {opacity: 0}
+    75% {opacity: 0;}
+    100% {opacity: 0.625;}
+}
+
+#sunbox{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.suns{
+    top: -107vh;
+	position: absolute;
+	height: 254.6vh;
+	transform-origin: center;
+}
+#map-b-text{
+	cursor: pointer;
+    animation-name: mbt;
+    animation-delay: 6s;
+    animation-fill-mode: backwards;
+    animation-duration: 1s;
+}
+@keyframes mbt{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/*
+sunbox edge to map edge = 45% sunbox = 114.57vh 
+sunbox to map-b-text edge = 47.8182% sunbox = 121.745vh;
+*/
+#map-b-light, #map-b-hover{
+    position: absolute;
+    height: 25.46vh;
+    top: 7.57vh;
+}
+#map-b-hover{
+    opacity: 0;
+    transition: all 0.3s;
+}
+#map-b-text{
+    position: absolute;
+    opacity: 0.75;
+    transition: all .5s;
+    height: 11.1098vh;
+    top: 14.745vh;
+}
+#map-b-text:hover + #map-b-hover, #map-b-text:hover{
+    opacity: 1;
+}
+#map-b-light{
+    animation-name: mbl;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+@keyframes mbl{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+#bs, #slogan{
+	color: white;
+    opacity: 0.8;
+    transition: 0.5s;
+    animation-name: tittle;
+    animation-duration: 5s;
+    animation-fill-mode:backwards;
+    animation-delay: 5s;
+}
+#bs:hover, #slogan:hover{
+    opacity: 1;
+}
+@keyframes tittle{
+    0%{opacity: 0;}
+    100%{opacity: 0.8;}
+}
+#planet0{
+	right: 0;
+	bottom: 0;
+}
+#blueship{
+    bottom: 0;
+}
+#planet0, #blueship{
+    animation-name: ship;
+}
+#rocks{animation-name: rocks;}
+#comet{animation-name: comet;}
+#planet5{animation-name: planet5;}
+#planet4{animation-name: planet4;}
+#planet3{animation-name: planet3;}
+#planet2{animation-name: planet2;}
+#planet1{animation-name: planet1;}
+#planet0, #blueship, #rocks, #comet, #planet5, #planet4, #planet3, #planet2, #planet1{   
+    animation-delay: 3s;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+@keyframes ship{
+    0%{transform: translateY(50vh);}
+    100%{transform: translateY(0);}
+}
+@keyframes rocks{
+    0%{transform: translateX(50vw);}
+    100%{transform: translateY(0);}
+}
+@keyframes comet{
+    0%{transform: translateY(-50vh);}
+    100%{transform: translateY(0);}
+}
+@keyframes planet5{
+    0%{transform: translateY(-50vh);}
+    100%{transform: translateY(0);}
+}
+@keyframes planet4{
+    0%{transform: translateY(-50vh);}
+    100%{transform: translateY(0);}
+}
+@keyframes planet3{
+    0%{transform: translateX(-20vh);}
+    100%{transform: translateX(0);}
+}
+@keyframes planet2{
+    0%{transform: translateX(20vh);}
+    100%{transform: translateX(0);}
+}
+@keyframes planet1{
+    0%{transform: translateX(-100vw);}
+    100%{transform: translateX(0);}
+}
+
+@media (min-aspect-ratio:1/2){
+	
+	.suns{
+		right: -100vh
+	}
+    #map-b-light, #map-b-hover{
+        right: 14.57vh;
+    }
+    #map-b-text{
+       right: 21.745vh; 
+    }
+	#comet{
+		height: 18vh;
+		left: -20vh;
+		top: 30%;
+	}
+	#rocks{
+		height: 10%;
+		top: 40%;
+		right: 10%;
+	}
+	#planet5{
+		height: 2.5%;
+		top: 15%;
+		right: 20%;
+	}
+	#planet4{
+		height: 5%;
+		top: 5%;
+		left: 20%;
+	}
+	#planet3{
+		height: 7.5%;
+		left: -6 %;
+		bottom: 5%;
+	}
+	#bs{
+		height: 5%;
+		right: 10%;
+		top: 35%;
+	}
+	#slogan{
+		height: 2.6%;
+		right:  15%;
+		top: 45%;
+	}
+	#planet2{
+		height: 10%;
+		right: -2.5vh;
+		top: 30%;
+	}
+	#planet1{
+		height: 50%;
+		left: -20vh;
+        top: 35%;
+	}
+	#planet0{
+		height: 10%;
+	}
+	#blueship{
+		height: 40%;
+		right: -10vh;
+	}
+	
+}
+
+@media (min-aspect-ratio:6/9){
+    
+    #bs{
+        right: 20%;
+    }
+    #slogan{
+        right: 20%;
+    }
+    #planet1{
+        left: -15vh;
+    }
+
+}
+
+@media (min-aspect-ratio:7/9){
+    
+    .suns{
+        right: -95vh;
+    }
+    #map-b-light, #map-b-hover{
+        right: 19.57vh;
+    }
+    #map-b-text{
+       right: 26.745vh; 
+    }
+    #planet1{
+        height: 60%; 
+        top: 30%;
+    }
+    #comet{
+        top: 25%;
+        height: 20vh;
+    }
+    #blueship{
+        right: -5vh;
+    }
+    #planet4{
+		left: 30%;
+	}
+}
+
+@media (min-aspect-ratio:9/9){
+    
+    #planet0{
+        
+    }
+    .suns{
+        right: -90vh;
+    }
+    #map-b-light, #map-b-hover{
+        right: 24.57vh;
+    }
+    #map-b-text{
+       right: 31.745vh; 
+    }
+    #planet1{
+        height: 75vh;
+        top: 25%;
+    }
+    #comet{
+        top: 20%;
+        height: 25vh;
+    }
+    #blueship{
+        right: 0;
+    }
+    #bs{
+		height: 8%;
+		right: 7%;
+	}
+	#slogan{
+		height: 3.5%;
+		right: 12%;
+		top: 47%;
+	}
+    #planet2{
+        height: 12%;
+    }
+    #planet4{
+		left: 40%;
+	}
+    #blueship{
+        height:45vh;
+    }
+    #planet0{
+        height: 12%;
+    }
+}
+
+@media (min-aspect-ratio:10/9){
+    
+    #planet1{
+        height: 80vh;
+        top: 20%;
+    }
+    #planet2{
+        height: 15%;
+        right: -3vh;
+    }
+    #planet5{
+        right: 15%;
+    }
+    #comet{
+        top: 15%;
+    }
+    #bs{
+        top: 38vh;
+        right: 6%;
+    }
+    #slogan{
+        top: 50%;
+    }
+    
+}
+
+@media (min-aspect-ratio:11/9){
+    
+    #planet1{
+        left: -10vh;
+    }
+    #bs{
+        right: 9%;
+    }
+    #slogan{
+        right: 14%;
+    }
+}
+
+@media (min-aspect-ratio:12/9){
+    
+    #planet1{
+        height: 90vh;
+        left: -10vh;
+    }
+    #comet{
+        height: 30%;
+        top: 15%;
+        left: -15%;
+    }
+}
+
+@media (min-aspect-ratio:13/9){
+    
+    #planet0{
+        height: 13%;
+        right: 0;
+    }
+    .suns{
+        right: -85vh;
+    }
+    #map-b-light, #map-b-hover{
+        right: 29.57vh;
+    }
+    #map-b-text{
+       right: 36.745vh; 
+    }
+    #blueship{
+        right: 5vh;
+        height: 47vh;
+    }
+    #planet1{
+        height: 100vh;
+        top: 10%;
+        left: -10vh;
+    }
+    #comet{
+        height: 30%;
+        top: 10%;
+        left: -15%;
+    }
+    #planet2{
+        height: 20%;
+        top: 25%;
+    }
+    #planet3{   
+        left: -6vh;
+        bottom: 5vh;
+        height: 12%;
+    }
+    #bs{
+        right: 10%;
+    }
+    #slogan{
+        right: 18%;
+    }
+}
+
+@media (min-aspect-ratio:14/9){
+    
+    #planet0{
+        height: 15%;
+    }
+    #planet1{
+        left: -5vh;
+    }
+    #comet{
+        left: -10%;
+        top: 5%;
+    }
+    #planet4{
+        left: 50%;
+    }
+    #bs{
+        height: 9.5vh;
+        right: 8.5%;
+        top: 35vh;
+    }
+    #slogan{
+        right: 15%;
+        top: 48vh;
+    }
+    #blueship{
+        height: 50vh;
+    }
+}
+
+@media (min-aspect-ratio:15/9){
+    
+    .suns{
+        right: -80vh;
+    }
+    #map-b-light, #map-b-hover{
+        right: 34.57vh;
+    }
+    #map-b-text{
+       right: 41.745vh; 
+    }
+    #blueship{
+        right: 10vh;
+    }
+    #planet1{
+        left: 0;
+    }
+    #bs{
+        height: 10%;
+        right: 8.5%; 
+    }
+    #planet3{
+        bottom: 10%;
+    }
+}
+
+@media (min-aspect-ratio:16/9){
+    
+    #planet1{
+        left: 5vh;
+        top: 8%;
+    }
+    #planet2{
+        right: -2vh;
+    }
+    #planet3{
+        left: -2%;
+        bottom: 20vh;
+    }
+    #blueship{
+        height: 50vh;
+    }
+    #bs{
+        height: 11vh;
+        top: 33vh;
+        right: 8%;
+    }
+    #slogan{
+        right: 18%;
+    }
+}
+
+@media (min-aspect-ratio:17/9){
+    
+    #planet0{
+        
+    }
+    #planet1{
+        left: 10vh;
+    }
+    #planet2{
+        right: 0;
+    }
+    #planet3{
+        left: -1vh;
+    }
+    #comet{
+        left: 5vh;
+    }
+    #bs{
+        right: 10%;
+    }
+    .suns{
+        right: -75vh;
+    }
+    #map-b-light, #map-b-hover{
+        right: 39.57vh;
+    }
+    #map-b-text{
+       right: 46.745vh; 
+    }
+    #blueship{
+        right: 15vh;
+    }
+}
+
+@media (min-aspect-ratio:18/9){
+    
+    #planet0{
+        height: 16vh;
+    }
+    #planet1{
+        left: 15vh;
+    }
+    #planet2{
+        right: 5vh;
+    }
+    #planet3{
+        left: 1vh;
+    }
+    #comet{
+        left: 10vh;
+    }
+    #bs{
+        right: 12%;
+    }
+    .suns{
+        right: -70vh;
+    }
+    #map-b-light, #map-b-hover{
+        right: 44.57vh;
+    }
+    #map-b-text{
+       right: 51.745vh; 
+    }
+    #blueship{
+        right: 20vh;
+    }
+    
+}
+
+@media (min-aspect-ratio:19/9){
+    
+    #planet0{
+        height: 16vh;
+    }
+    #bs{
+        right: 14%;
+    }
+    #slogan{
+        right: 24%;
+    }
+    .suns{
+        right: -65vh;
+    }
+    #map-b-light, #map-b-hover{
+        right: 49.57vh;
+    }
+    #map-b-text{
+       right: 56.745vh; 
+    }
+    #blueship{
+        right: 25vh;
+    }
+    
+}
+
+@media (min-aspect-ratio:20/9){
+    
+    #planet0{
+        height: 17vh;
+    }
+    #bs{
+        right: 16%;
+    }
+    #slogan{
+        right: 24%;
+    }
+    .suns{
+        right: -60vh;
+    }
+    #map-b-light, #map-b-hover{
+        right: 54.57vh;
+    }
+    #map-b-text{
+       right: 61.745vh; 
+    }
+    #blueship{
+        right: 30vh;
+    }
+    
+}
+
+@media (min-aspect-ratio:21/9){
+    
+    
+    
+}
