@@ -53,7 +53,7 @@
 		
         <!-- BACKGROUND MUSIC -->
             
-            <audio autoplay loop>
+            <audio id="bgmusic" autoplay loop>
                 <source src="audio/background-music.ogg" type="audio/ogg">
             </audio>
             
@@ -66,8 +66,10 @@
 				<div class="mute-spectrum align-self-center"></div>
             </div>
         
-		<!-- NAVIGATION -->
-		<div id="map"></div>
+		<!-- MAP -->
+		<div id="map">
+			
+		</div>
 	</div>
 	
 	<!-- CONTENT -->
@@ -78,27 +80,37 @@
         </div>
         
 	</div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-3.2.1.min.js"></script>
-
-      <script>
-      
-            // VOLUME //
-				
-            $(document).ready(function(){
-				$(".mute-spectrum").hide();
-
-				$(".square0").hover(function(){
-					$(this).css({"opacity": "0.025"});
-					}, function(){
-						$(this).css({"opacity": "0"});
-				});
-            });
-      </script>
-      
-      
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/popper.min.js"></script> 
-  <script src="js/bootstrap-4.0.0.js"></script>
+	<script src="js/bootstrap-4.0.0.js"></script>
+	
+	<script>
+      
+		// AUDIO & VOLUME //
+
+		$(".mute-spectrum").hide();
+		var x = 1;
+		$("#volume").click(function() {
+			if (x==1) {
+				$("#bgmusic").pause();
+				$(this).css({"animation-name":"none"});
+				$(".volume-spectrum").fadeOut(400);
+				$(".mute-spectrum").fadeIn(400);
+				x == 0;
+			} else {
+				$(this).css({"animation-name":"volume"});
+				$(".volume-spectrum").fadeIn(400);
+				$(".mute-spectrum").fadeOut(400);
+				x == 1;
+				$("#bgmusic").play();
+			}
+		})
+		$(document).ready(function(){
+			
+
+			
+		});
+  	</script>
+	
   </body>
 </html>

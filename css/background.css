@@ -1,9 +1,28 @@
 @charset "utf-8";
 
 /* 16:9 - 800:450 21:9 - 1050:450 1:1 - 450:450 1:2 - 225:450 */
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+body {
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
 
+@keyframes SpaceColor {
+    0% {background-color: #0d166b;}
+    25% {background-color: #0d0d6b;}
+    50% {background-color: #230d6b;}
+    75% {background-color: #0d0d6b;}
+    100% {background-color: #0d166b;}
+}
 #bg {
-	background-color: #000779;
+    animation-name: SpaceColor;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+	background-color: #0d0d6b;
 	height: 100vh;
 	width: 100vw;
 	position: fixed;
@@ -245,16 +264,17 @@ sunbox to map-b-text edge = 47.8182% sunbox = 121.745vh;
 #planet2{animation-name: planet2;}
 #planet1{animation-name: planet1;}
 #planet0, #blueship, #rocks, #comet, #planet5, #planet4, #planet3, #planet2, #planet1{   
-    animation-delay: 3s;
+    animation-delay: 1s;
     animation-fill-mode: both;
     animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 @keyframes ship{
     0%{transform: translateY(50vh);}
     100%{transform: translateY(0);}
 }
 @keyframes rocks{
-    0%{transform: translateX(50vw);}
+    0%{transform: translateX(100vw);}
     100%{transform: translateY(0);}
 }
 @keyframes comet{
@@ -315,7 +335,7 @@ sunbox to map-b-text edge = 47.8182% sunbox = 121.745vh;
 	}
 	#planet3{
 		height: 7.5%;
-		left: -6 %;
+		left: -6%;
 		bottom: 5%;
 	}
 	#bs{
@@ -390,10 +410,7 @@ sunbox to map-b-text edge = 47.8182% sunbox = 121.745vh;
 }
 
 @media (min-aspect-ratio:9/9){
-    
-    #planet0{
-        
-    }
+
     .suns{
         right: -90vh;
     }
@@ -618,9 +635,6 @@ sunbox to map-b-text edge = 47.8182% sunbox = 121.745vh;
 
 @media (min-aspect-ratio:17/9){
     
-    #planet0{
-        
-    }
     #planet1{
         left: 10vh;
     }
